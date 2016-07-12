@@ -11,8 +11,6 @@ public class MathGame2 {
     
     int answer = 0;
     
-    int wrong = 0;
-    
     int total;
     
     total = 0;
@@ -36,12 +34,12 @@ public class MathGame2 {
         if (input == num1 - num2)
         {
             total = total + 1;
-            wrong = wrong - 1;
+            
         }
         if (input != num1 - num2)
         {
              total = total - 1;
-             wrong = wrong + 1;
+             
              
         }
     }
@@ -59,12 +57,12 @@ public class MathGame2 {
         if (input == num1 + num2)
         {
             total = total + 1;
-            wrong = wrong - 1;
+            
         }
         if (input != num1 + num2)
         {
              total = total - 1;
-             wrong = wrong + 1;
+             
         }
     }
     
@@ -81,20 +79,18 @@ public class MathGame2 {
         if (input == num1 * num2)
         {
             total = total + 1;
-            wrong = wrong - 1;
+            
         }
         if (input != num1 * num2)
         {
              total = total - 1;
-             wrong = wrong + 1;
+             
         }
     }
     
     System.out.println("You have " +total+ " points");
-
-    }while (total < 25);
     
-    if (wrong < 6)
+    if (total < 25)
     {
      System.out.println("Self Destruct in");
     
@@ -195,6 +191,7 @@ public class MathGame2 {
     System.out.println("KABOOM!");
     }
     
+    }while (total < 25);
     
     }
 }
